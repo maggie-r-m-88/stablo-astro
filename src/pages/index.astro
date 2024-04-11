@@ -3,6 +3,9 @@ import Container from "@components/container.astro";
 import Postlist from "@components/postlist.astro";
 import Layout from "@layouts/Layout.astro";
 import { latestPosts } from "@utils/content";
+import { Image } from "@astrojs/image/components";
+import heroImage from "@assets/header.jpg";
+import Pagetitle from "@components/pagetitle.astro";
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 // const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 //   (a, b) =>
@@ -15,7 +18,32 @@ import { latestPosts } from "@utils/content";
 <Layout title="">
   <Container>
     <main>
-      <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
+      <div class="w-full">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.261501605941!2d-83.21464942388694!3d35.12514726032026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885918d9eb450559%3A0x22ecd9e08f96461d!2s544%20Western%20Rhodes%20Dr%2C%20Highlands%2C%20NC%2028741%2C%20USA!5e0!3m2!1sen!2ses!4v1712761561694!5m2!1sen!2ses"
+          width="100%"
+          class="w-full"
+          height="300"
+          style="border:0;"
+          allowfullscreen="true"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div><br /><br />
+      <p class="text-2xl">
+        Carpe Diem, which means seize the day, is a life enrichment center
+        located on 44 acres nestled in the Blue Ridge Mountains of southwestern
+        North Carolina. <br /><br />
+      </p>
+      <p>
+        Eight miles outside of Highlands, it is, by
+        intent, off the so-called beaten path. Surrounded by national forest
+        lands, it is a place of trees, waterfalls, hiking trails, picnic and
+        camping areas. It is a place of nature.
+      </p>
+      <Image src={heroImage} alt="The Labrynth" class="mt-6 w-full"/>
+      <h3 class="text-xl font-medium my-4">The Labrynth</h3>
+      <p>Carpe Diem’s labyrinth is a member of the World Wide Labyrinth Association. It was created by former Highlands resident Jaan Ferree and constructed by a group of volunteers under Jaan’s direction. The labyrinth is a seven-circuit design made of rocks and stones from the land at Carpe Diem.</p>
+      <!-- <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
         {
           latestPosts
             .slice(0, 2)
@@ -30,7 +58,7 @@ import { latestPosts } from "@utils/content";
             .slice(2)
             .map((post) => <Postlist post={post} aspect="square" />)
         }
-      </div>
+      </div>-->
     </main>
   </Container>
 </Layout>

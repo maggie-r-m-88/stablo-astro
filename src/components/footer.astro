@@ -1,10 +1,14 @@
 ---
 import Container from "./container.astro";
 import Themeswitch from "./themeswitch.astro";
+import siteConfig from '../data/site-config';
+
+const socialLinks = siteConfig.socialLinks || [];
+const navLinks = siteConfig.footerNavLinks || [];
 ---
 
-<Container class="mt-10 border-t border-gray-100 dark:border-gray-800">
-  <footer class="flex flex-col items-center">
+<Container class="mt-10">
+  <!-- <footer class="flex flex-col items-center">
     <div class="text-sm text-center">
       Copyright © {new Date().getFullYear()} Stablo. All rights reserved.
     </div>
@@ -18,11 +22,6 @@ import Themeswitch from "./themeswitch.astro";
           target="_blank">
           Web3Templates
         </a>
-        <!--
-    Can we ask you a favor 🙏
-    Please keep this backlink on your website if possible.
-    or Purchase a commercial license from https://web3templates.com
-  -->
       </span>
       <span>&middot;</span>
       <span>
@@ -36,6 +35,53 @@ import Themeswitch from "./themeswitch.astro";
     </div>
     <div class="flex items-center justify-between mt-2">
       <Themeswitch />
+    </div>
+  </footer>-->
+
+  <footer class="w-full max-w-3xl mx-auto pt-12 pb-10 sm:pt-24 sm:pb-14">
+    {
+      navLinks.length > 0 && (
+        <div class="mb-4 flex flex-wrap gap-x-6 gap-y-1">
+          {navLinks.map((link) => (
+            <a
+              class="font-serif hover:underline hover:underline-offset-2"
+              href={link.href}>
+              {link.text}
+            </a>
+          ))}
+        </div>
+      )
+    }
+    <div
+      class:list={[
+        "pt-6 flex flex-col gap-4 border-t border-dashed border-gray-500",
+        {
+          "sm:flex-row-reverse sm:justify-between sm:items-center":
+            socialLinks.length > 0,
+        },
+      ]}>
+      {
+        socialLinks.length > 0 && (
+          <div class="flex flex-wrap gap-x-4 gap-y-1">
+            {socialLinks.map((link) => (
+              <a
+                class="inline-flex items-center justify-center text-sm hover:underline hover:underline-offset-2"
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferer">
+                {link.text}
+              </a>
+            ))}
+          </div>
+        )
+      }
+      <p class="text-sm">
+        &copy; {new Date().getFullYear()}&nbsp;<a
+          class="hover:underline hover:underline-offset-2"
+          href="/">{siteConfig.title}</a
+        >.<br>
+        544 Western Rhodes Dr, Highlands, NC 28741, USA
+      </p>
     </div>
   </footer>
 </Container>
