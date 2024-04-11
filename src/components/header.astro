@@ -1,0 +1,17 @@
+---
+import Container from "@components/container.astro";
+import { Image } from "@astrojs/image/components";
+import logoImage from "@assets/logo.jpg";
+---
+
+<div class="flex flex-wrap justify-center">
+  <a class="hidden md:block" href="/">
+    <Image src={logoImage} alt="Logo" style="width:300px;" />
+  </a>
+</div>
+<div class="text-center">
+  <h1 class="mt-4 font-serif text-5xl italic">Carpe Diem Farms</h1>
+  <h2 class="mt-3 text-sm uppercase tracking-wider font-light">
+    Exploring the Human Potential Through Equines
+  </h2>
+</div>
