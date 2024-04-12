@@ -10,39 +10,48 @@ import Pagetitle from "@components/pagetitle.astro";
   <Container>
     <Pagetitle>
       <Fragment slot="title">Contact</Fragment>
-      <Fragment slot="desc">We are a here to help.</Fragment>
+      <Fragment slot="desc">Have questions or inquiries? Reach out to us using the information below for details or regarding collaboration opportunities.</Fragment>
     </Pagetitle>
 
     <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
       <div>
         <h2 class="font-medium text-2xl text-gray-800 dark:text-gray-200">
-          Contact Stablo
+          Carpe Diem Farms
         </h2>
-        <p
+        <!-- <p
           class="text-lg leading-relaxed text-gray-500 dark:text-gray-400 mt-3">
           Have something to say? We are here to help. Fill up the form or send
           email or call phone.
-        </p>
+        </p> -->
         <div class="mt-5">
           <div
             class="flex items-center mt-2 space-x-2 text-gray-600 dark:text-gray-300">
             <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>1734 Sanfransico, CA 93063</span>
+            <span>544 Western Rhodes Dr, <br>Highlands, NC 28741</span>
           </div><div
             class="flex items-center mt-2 space-x-2 text-gray-600 dark:text-gray-300">
             <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:hello@stablotemplate.com">hello@stablotemplate.com</a
+              href="mailto:blair.carpediem@gmail.com">blair.carpediem@gmail.com</a
             >
           </div><div
             class="flex items-center mt-2 space-x-2 text-gray-600 dark:text-gray-300">
             <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-              href="tel:+1 (987) 4587 899">+1 (987) 4587 899</a
+              href="tel:+1 (987) 4587 899">(828) 526-2854</a
             >
           </div>
         </div>
       </div>
       <div>
-        <Contactform />
+        <!-- <Contactform />-->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.261501605941!2d-83.21464942388694!3d35.12514726032026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885918d9eb450559%3A0x22ecd9e08f96461d!2s544%20Western%20Rhodes%20Dr%2C%20Highlands%2C%20NC%2028741%2C%20USA!5e0!3m2!1sen!2ses!4v1712761561694!5m2!1sen!2ses"
+          width="100%"
+          class="w-full"
+          height="300"
+          style="border:0;"
+          allowfullscreen="true"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </Container>

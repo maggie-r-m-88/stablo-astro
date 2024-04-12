@@ -15,13 +15,11 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const { title, desc, ogimage = "/opengraph.jpg" } = Astro.props;
+const { title, desc, ogimage = "/opengraph.png" } = Astro.props;
 
 const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
 
-const makeTitle = title
-  ? title + " | " + "Stablo"
-  : "Stablo — Free Blog Website Template built with Astro & MDX";
+const makeTitle = "Carpe Diem Farms";
 ---
 
 <!DOCTYPE html>
@@ -29,12 +27,12 @@ const makeTitle = title
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!--<link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" /> -->
     <meta name="generator" content={Astro.generator} />
     <SEO
       title={makeTitle}
       description={desc ||
-        "Stablo is a Blog Starter Template built with Astro & MDX."}
+        "Carpe Diem Farms | Exploring the human potential through equines | Highlands, NC"}
       canonical={canonicalURL}
       twitter={{
         creator: "@surjithctly",
@@ -45,11 +43,11 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Stablo - Blog Starter Template for Astro`,
+          title: `Carpe Diem Farms | Exploring the human potential through equines | Highlands, NC`,
           image: resolvedOGImage,
         },
         image: {
-          alt: "Stablo Screenshot",
+          alt: "Carpe Diem Farms",
         },
       }}
     />

@@ -1,0 +1,55 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import { Image } from "@astrojs/image/components";
+import { authors } from "@data/authors";
+import Pagetitle from "@components/pagetitle.astro";
+import Link from "@components/ui/link.astro";
+import heroImage from "@assets/8488880_orig.jpg";
+import secondaryImage1 from "@assets/2903999_orig.jpg";
+import secondaryImage2 from "@assets/6985431.jpg";
+---
+
+<Layout title="About">
+  <Container>
+    <Pagetitle>
+      <Fragment slot="title">Adopt-a-Horse</Fragment>
+      <Fragment slot="desc">
+        Miracles abound at Carpe Diem because of our unique and devoted equine
+        staff--without them there is no program! These amazing creatures help
+        individuals work through fears, overcome physical and emotional
+        limitations, and so much more.
+      </Fragment>
+    </Pagetitle>
+
+    <Image src={heroImage} alt="Carpe Diem Farms" class="mt-6 w-full" />
+
+    <p class="mt-6">
+      Their care costs over $55,000/year ($5,500/horse). Our adopt a horse
+      program, which covers daily care, farrier, vet bills, food, hay,
+      supplements, vitamins, grooming supplies and training costs, offers a
+      unique opportunity to provide the joy of horsemanship to many. We are
+      looking for individuals or groups to become adoptive families for our
+      horses. Sign up now--join with others and pay a portion or pay it all,
+      either way, your name or the name of your choice will be posted on "your"
+      horse's stall as a supporter. You will receive an adoption certificate,
+      pictures of your horse, and frequent updates. Of course, we encourage you
+      to schedule a time to come by and visit your new friend! By adopting a
+      horse, you will touch not only the lives of these amazing equines, but
+      also every participant who walks through the gate.
+    </p>
+
+    <div class="grid gap-10 lg:gap-10 md:grid-cols-2 mt-6">
+        <Image src={secondaryImage1} alt="Carpe Diem Farms" class="w-full"/>
+        <Image src={secondaryImage2} alt="Carpe Diem Farms" class="w-full"/>
+      </div>
+
+    <h3 class="text-xl font-medium my-4">Ways You Can Help CDF</h3>
+    <p>
+      For a tax deductible donation, benefactors can choose from a seemingly
+      endless list of needs at the Farm. Possibilities include underwriting/sponsoring a fundraising event, temporary/part-time staff fund, A/V equipment, outdoor lighting.
+    </p><br />
+    <p>The list goes on and on. Giving can be tailored to the giver. Donations may be given in a variety of ways: in memory of a loved one; in recognition of yourself or a family member; creating an endowment or scholarship fund; providing a gift in order to name a building, room, garden or meditation area. Our dynamic life enrichment center is growing and we appreciate your help.  </p>
+
+  </Container>
+</Layout>

@@ -5,16 +5,48 @@ import { Image } from "@astrojs/image/components";
 import { authors } from "@data/authors";
 import Pagetitle from "@components/pagetitle.astro";
 import Link from "@components/ui/link.astro";
+import heroImage from "@assets/1402943_orig.jpg";
+import secondaryImage1 from "@assets/5591729_orig.jpg";
+import secondaryImage2 from "@assets/7948689.jpg";
+import secondaryImage3 from "@assets/143204713.jpg";
 ---
 
 <Layout title="About">
   <Container>
     <Pagetitle>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="title">About Us</Fragment>
+      <Fragment slot="desc">Carpe Diem Farms Inc. is a 501 (c)(3) public, non-profit, educational and charitable corporation created in 1992 with a vision to empower individuals to convert life challenges into opportunities. Since its inception, it has been the source of workshops, seminars and specialized trainings. Support and personal guidance has been provided to individuals from across the country who are examining the challenges of their lives and designing new futures themselves. </Fragment>
     </Pagetitle>
 
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+    <Image src={heroImage} alt="Carpe Diem Farms" class="mt-6 w-full"/>
+
+    <p class="mt-6">Carpe Diem Farms is a place to create, discover and have fun--that is its mission. It is a place to discover, or perhaps rediscover, the still small voice within, that voice of inner knowing that so easily goes unheard in the din of daily life. Carpe Diem Farms is a place to be nurtured and to nurture oneself. It is a place for contemplation more that competition, meditation rather than agitation, a place to revive the spirit. It is a place to have fun, to laugh both on the outside as well as the inside. It is a place to remember how to play, how to let go and experience the joy of oneself and the enjoyment of others. </p>
+    <p class="mt-6">Carpe Diem is for men, women, children. It is for all ages. It is for individuals, couples, families, students and groups, including business groups. It is a sanctuary for humans and animals alike. It is for day use as well as extended stay. It is for those attending a specific program, or those who just want to escape from structured activities altogether. It is for anyone wanting to retreat from the noise and distraction of the outside world and experience the whisper of the wind in the woods.  </p>
+    
+    <h3 class="text-xl font-medium my-4">Virtual Tour</h3>
+    <iframe src="https://www.youtube.com/embed/C7Jf7QrHrsM" frameborder="0" allowfullscreen class="w-full" width="100%" height="400"></iframe>
+
+    <h3 class="text-xl font-medium my-4">The Realization of a Vision</h3>
+      <p>Carpe Diem opened in October 1997, culminating seven years of work by Highlands resident Sue M. Blair. It had been her dream and continues to be her passion. She remains the driving force for what is intended to one day be an international wellness center. Carpe Diem Farms is a 501(c)(3) public, non-profit educational and charitable corporation created with a vision to empower individuals to convert life challenges into opportunities. 
+        Everything Sue has done since 1991 has been directed towards the realization of the wellness center. She has put her energy, her attention and her financial resources into making it happen. Much of the time it looked like a one-woman effort, but that has changed as the Foundation board members and a growing number of volunteers have taken on the vision and the work. Carpe Diem is an all-volunteer project, having no paid staff. 
+        </p><br/>
+        <p>Sue was inspired to establish Carpe Diem after a series of unexpected life changes. She took adversity and turned it into opportunity and in the process she saw more clearly the life challenges that easily overwhelm others. She came away from what period with "a vision to work with women and men, who have experienced life changing situations, such as a death of a loved one, a divorce, the untimely demise of one's career . . . and help them recreate their lives for themselves and their children." From the beginning, Sue felt "God had a plan for me and my vision:" Carpe Diem Farms. 
+        Sue shares her passion for animals with guests to the farm. As an animal advocate and coach, she has made Carpe Diem a permanent home for ten horses, three dogs, and two cats. These animals all have a story to tell and lessons to impart. Many were abused, abandoned, or orphaned and some of the CDF residents have special needs. 
+        Sue has been dancing with horses since the age of three. Some of her equine credentials include: Equine Facilitated Experiential Learning Instructor, The Equine Assisted Growth and Learning Association, TTouch/TTeam Certified as well as certified as an AIA, Adventures in Awareness Facilitator.  </p>
+        <h3 class="text-xl font-medium my-4 text-center">
+          Sue M. Blair<br/>
+          CEO Founder</h3>
+          <div class="grid gap-10 lg:gap-10 md:grid-cols-2 mt-6">
+            <div>
+              <Image src={secondaryImage1} alt="Carpe Diem Farms" class="w-full"/>
+              <Image src={secondaryImage3} alt="Carpe Diem Farms" class="w-full mt-10"/>
+            </div>
+            <div>
+              <Image src={secondaryImage2} alt="Carpe Diem Farms" class="w-full"/>
+            </div>
+
+        </div>
+    <!-- <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
         authors.slice(0, 3).map((item) => (
           <div class="group">
@@ -38,9 +70,9 @@ import Link from "@components/ui/link.astro";
           </div>
         ))
       }
-    </div>
+    </div> -->
 
-    <div class="mx-auto max-w-xl text-center mt-14">
+    <!-- <div class="mx-auto max-w-xl text-center mt-14">
       <p class="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
         We're a multi-cultural team from around the world! We come from diverse
         backgrounds, bringing different personalities, experiences and skills to
@@ -49,6 +81,6 @@ import Link from "@components/ui/link.astro";
       <div class="mt-8">
         <Link href="/contact" style="primary">Get in touch</Link>
       </div>
-    </div>
+    </div> -->
   </Container>
 </Layout>

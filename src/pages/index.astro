@@ -6,6 +6,9 @@ import { latestPosts } from "@utils/content";
 import { Image } from "@astrojs/image/components";
 import heroImage from "@assets/header.jpg";
 import Pagetitle from "@components/pagetitle.astro";
+import secondaryImage1 from "@assets/lab1.png";
+import secondaryImage2 from "@assets/lab2.jpg";
+
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 // const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 //   (a, b) =>
@@ -38,11 +41,22 @@ import Pagetitle from "@components/pagetitle.astro";
         Eight miles outside of Highlands, it is, by
         intent, off the so-called beaten path. Surrounded by national forest
         lands, it is a place of trees, waterfalls, hiking trails, picnic and
-        camping areas. It is a place of nature.
+        camping areas. It is a place of nature.  It is 135 miles north of Atlanta, GA, and 65 miles south west of Asheville, NC. 
       </p>
-      <Image src={heroImage} alt="The Labrynth" class="mt-6 w-full"/>
-      <h3 class="text-xl font-medium my-4">The Labrynth</h3>
+      <Image src={heroImage} alt="Carpe Diem Farms" class="mt-6 w-full"/>
+
+      <h3 class="text-xl font-medium my-4">The Labyrinth</h3>
       <p>Carpe Diem’s labyrinth is a member of the World Wide Labyrinth Association. It was created by former Highlands resident Jaan Ferree and constructed by a group of volunteers under Jaan’s direction. The labyrinth is a seven-circuit design made of rocks and stones from the land at Carpe Diem.</p>
+      <div class="grid gap-10 lg:gap-10 md:grid-cols-2 mt-6">
+        <Image src={secondaryImage1} alt="The Labrynth" class="w-full"/>
+        <Image src={secondaryImage2} alt="The Labrynth" class="w-full"/>
+      </div>
+
+      <h3 class="text-xl font-medium my-4">Our Mission</h3>
+      <p>Here at the farm, we challenge visitors to see the possibilities and opportunities that abound. Our purpose is to create a community of understanding in which individuals' passions and dreams may be expressed in a safe environment that embraces the very essence of who they are. 
+        Carpe Diem Farms works with individuals, families, schools, groups and corporations as well as other non-profit organizations. </p>
+      
+      
       <!-- <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
         {
           latestPosts
