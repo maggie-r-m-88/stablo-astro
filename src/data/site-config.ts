@@ -70,7 +70,7 @@ const siteConfig: SiteConfig = {
         },
         {
             text: 'About',
-            href: '/projects'
+            href: '/about'
         },
         {
             text: 'Adopt-A-Horse',
